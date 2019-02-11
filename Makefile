@@ -18,6 +18,5 @@ test_core: generate
 	go test -race $(shell go list ./... | grep -v /vendor/ | grep -v /_tools/)
 
 setup:
-	./install_proto.bash
 	GOPATH=$(CURDIR)/_tools go install github.com/twitchtv/retool/...
 	$(RETOOL) build
