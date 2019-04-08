@@ -5,6 +5,6 @@ container: golang:1.12
 
 steps:
   - script: |
-      apt-get update && apt-get install -y unzip
+      sudo apt-get update && sudo apt-get install -y unzip
       make bootstrap
   - script: make ci
