@@ -31,7 +31,7 @@ func (m *Hat) Reset()         { *m = Hat{} }
 func (m *Hat) String() string { return proto.CompactTextString(m) }
 func (*Hat) ProtoMessage()    {}
 func (*Hat) Descriptor() ([]byte, []int) {
-	return fileDescriptor_service_a6dca8583e7a578f, []int{0}
+	return fileDescriptor_service_bbc3fbc4782ebabd, []int{0}
 }
 func (m *Hat) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Hat.Unmarshal(m, b)
@@ -83,7 +83,7 @@ func (m *Size) Reset()         { *m = Size{} }
 func (m *Size) String() string { return proto.CompactTextString(m) }
 func (*Size) ProtoMessage()    {}
 func (*Size) Descriptor() ([]byte, []int) {
-	return fileDescriptor_service_a6dca8583e7a578f, []int{1}
+	return fileDescriptor_service_bbc3fbc4782ebabd, []int{1}
 }
 func (m *Size) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Size.Unmarshal(m, b)
@@ -115,9 +115,9 @@ func init() {
 	proto.RegisterType((*Size)(nil), "twirptest.Size")
 }
 
-func init() { proto.RegisterFile("service.proto", fileDescriptor_service_a6dca8583e7a578f) }
+func init() { proto.RegisterFile("service.proto", fileDescriptor_service_bbc3fbc4782ebabd) }
 
-var fileDescriptor_service_a6dca8583e7a578f = []byte{
+var fileDescriptor_service_bbc3fbc4782ebabd = []byte{
 	// 173 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xe2, 0xe2, 0x2d, 0x4e, 0x2d, 0x2a,
 	0xcb, 0x4c, 0x4e, 0xd5, 0x2b, 0x28, 0xca, 0x2f, 0xc9, 0x17, 0xe2, 0x2c, 0x29, 0xcf, 0x2c, 0x2a,
