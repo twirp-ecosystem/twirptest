@@ -1,6 +1,8 @@
 TOOLS = $(CURDIR)/_tools/
 export GOBIN := $(TOOLS)/bin
 export PATH := $(GOBIN):${PATH}
+PROTOC_VER=3.7.1
+
 .DEFAULT_GOAL := all
 
 .PHONY: all
@@ -16,6 +18,8 @@ clean:
 
 .PHONY: bootstrap
 bootstrap:
+	curl -Lso $(TOOLS)/protoc-$(PROTOC_VER)-linux-x86_64.zip https://github.com/protocolbuffers/protobuf/releases/download/v$(PROTOC_VER)/protoc-$(PROTOC_VER)-linux-x86_64.zip
+	cd $(BUILD_DIR); unzip protoc-$(PROTOC_VER)-linux-x86_64.zip
 	cd $(TOOLS) && go install github.com/golangci/golangci-lint/cmd/golangci-lint
 	cd $(TOOLS) && go install golang.org/x/tools/cmd/goimports
 	cd $(TOOLS) && go install github.com/kisielk/errcheck

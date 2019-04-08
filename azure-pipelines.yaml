@@ -4,5 +4,7 @@ pool:
 container: golang:1.12
 
 steps:
-  - script: make bootstrap
+  - script: |
+      apt-get update && apt-get install -y unzip
+      make bootstrap
   - script: make ci
